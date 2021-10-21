@@ -6,12 +6,27 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct ContentView: View {
+
+    //서울시청 좌표
+    @State var userLocation = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.56646086887688, longitude: 126.97796141986984), span: MKCoordinateSpan())
+        
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-    }
+//        Map(coordinateRegion: $userLocation)
+//            .edgesIgnoringSafeArea(.all)
+        myMapView()
+            .edgesIgnoringSafeArea(.all)
+           
+
+        
+        
+        
+        
+        
+        
+    } // body
 }
 
 struct ContentView_Previews: PreviewProvider {
